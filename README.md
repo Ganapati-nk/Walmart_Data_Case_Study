@@ -1,4 +1,4 @@
-# Walmart Data Analysis
+# WALMART DATA: ANALYSIS AND BUSINESS INSIGHTS CASE STUDY
 
 ## Project Overview
 
