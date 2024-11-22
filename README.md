@@ -15,9 +15,9 @@ This project is designed to demonstrate Python(Pandas) skills and techniques typ
 
 ## Project Structure
 
-### 1. Database Setup
+### 1. Data
 
-- **Database Creation**:Loading data.
+- **Data**:Load walmart sales data.
 
 ```python
 import pandas as pd
@@ -28,9 +28,10 @@ df=pd.read_csv(r"C:\Users\Bhargav\Downloads\Walmart.csv")
 
 ### 2. Data Exploration & Cleaning
 
-- **Record Count**: Determine the total number of records in the dataset.
-- **Customer Count**: Find out how many unique customers are in the dataset.
-- **Category Count**: Identify all unique product categories in the dataset.
+- **Top Rows**: Determine the top 5 records of the dataset.
+- **dataset Shape**: Find out how many rows and columns are in the dataset.
+- **Statistical Summary**: Find out the statistical summary.
+- **Duplicate Value Check**: Check for any duplicate values in the dataset and delete records with duplicate data.
 - **Null Value Check**: Check for any null values in the dataset and delete records with missing data.
 
 ```Python
@@ -57,7 +58,7 @@ df.drop(['date','time'],axis=1,inplace=True)
 
 ### 3. Data Analysis & Findings
 
-The following SQL queries were developed to answer specific business questions:
+The following Python codes were developed to answer specific business questions:
 
 1. **Question: What are the different payment methods, and how many transactions and items were sold with each method?**:
 ```Python
@@ -139,14 +140,13 @@ df.groupby(['City'])['Profit'].sum().sort_values(ascending=False).head(5)
 
 - **Sale Analysis**: The products distributed across different categories such as Fashion accessories,Home and lifestyle,Electronic accessories,Food and beverages,Sports and travel,Health and beauty
 - **Time of transactions**: Maximum transactions occur during Afternoon
+- **Customer Insights**: The analysis identifies Most customers use credit card as payment method.
 - **Profit Analysis**: Fashion accessories and Home and lifestyle categories produce maximum profits.
                        WALM009,WALM030,WALM003,WALM029,WALM046 are maximum profit producing branches.
                        WALM097,WALM100,WALM092,WALM098,WALM077 are minimum profit producing branches.
                        Weslaco,Waxahachie,Plano,Richardson,San Antonio are maximum profit producing Cities.
                        Alice,Canyon,Lake Jackson,Mineral Wells,Coppell are maximum profit producing Cities.
 
-
-- **Customer Insights**: The analysis identifies Most customers use credit card as payment method
 
 ## Conclusion
 
